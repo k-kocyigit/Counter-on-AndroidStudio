@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEB3B"
+    tools:context=".SetupActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="Alt Limit"
+        android:textColor="#009688"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lowLimit"
+        app:layout_constraintStart_toStartOf="@+id/lowLimit"
+        app:layout_constraintTop_toBottomOf="@+id/up_sound" />
+
+    <Button
+        android:id="@+id/low_minus"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="26dp"
+        android:text="-"
+        android:textColor="#FFC107"
+        android:textSize="34sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/low_plus"
+        app:layout_constraintEnd_toStartOf="@+id/low_plus"
+        app:layout_constraintStart_toEndOf="@+id/lowLimit" />
+
+    <Button
+        android:id="@+id/low_plus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="170dp"
+        android:text="+"
+        android:textColor="#FFC107"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/low_minus"
+        app:layout_constraintTop_toBottomOf="@+id/up_plus" />
+
+    <CheckBox
+        android:id="@+id/low_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="74dp"
+        android:text="ses"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/low_vib"
+        app:layout_constraintTop_toBottomOf="@+id/low_vib" />
+
+    <EditText
+        android:id="@+id/lowLimit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/low_vib"
+        app:layout_constraintEnd_toStartOf="@+id/low_minus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <CheckBox
+        android:id="@+id/low_vib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="titreşim"
+        app:layout_constraintBottom_toTopOf="@+id/low_sound"
+        app:layout_constraintStart_toStartOf="@+id/lowLimit"
+        app:layout_constraintTop_toBottomOf="@+id/lowLimit" />
+
+    <Button
+        android:id="@+id/up_minus"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="26dp"
+        android:text="-"
+        android:textColor="#FFC107"
+        android:textSize="34sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/up_plus"
+        app:layout_constraintEnd_toStartOf="@+id/up_plus"
+        app:layout_constraintStart_toEndOf="@+id/upper_Limit" />
+
+    <CheckBox
+        android:id="@+id/up_vib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="titreşim"
+        app:layout_constraintBottom_toTopOf="@+id/up_sound"
+        app:layout_constraintStart_toStartOf="@+id/upper_Limit"
+        app:layout_constraintTop_toBottomOf="@+id/upper_Limit" />
+
+    <Button
+        android:id="@+id/up_plus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="280dp"
+        android:text="+"
+        android:textColor="#FFC107"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/low_plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/up_minus"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="114dp"
+        android:layout_marginBottom="11dp"
+        android:text="Üst Limit"
+        android:textColor="#009688"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/upper_Limit"
+        app:layout_constraintStart_toStartOf="@+id/upper_Limit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="71dp"
+        android:text="Ayarlar"
+        android:textColor="#673AB7"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/up_plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/upper_Limit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/up_vib"
+        app:layout_constraintEnd_toStartOf="@+id/up_minus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <CheckBox
+        android:id="@+id/up_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="125dp"
+        android:text="ses"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/up_vib"
+        app:layout_constraintTop_toBottomOf="@+id/up_vib" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
